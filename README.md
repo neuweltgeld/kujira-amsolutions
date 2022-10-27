@@ -85,6 +85,7 @@ EOF
 # add addrbook manually.
 
 
+
 ```
 sudo systemctl enable kujirad.service && sudo systemctl daemon-reload \
 && sudo systemctl restart kujirad && sudo journalctl -u kujirad -f -o cat
@@ -94,6 +95,9 @@ sudo systemctl enable kujirad.service && sudo systemctl daemon-reload \
 sed -i.bak -E "s|^(enable[[:space:]]+=[[:space:]]+).*$|\1false|" $HOME/.kujira/config/config.toml
 ```
 
+```
+kujirad keys add wallet
+```
 ```
 kujirad status 2>&1 | jq .SyncInfo
 ```
