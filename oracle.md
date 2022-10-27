@@ -24,8 +24,10 @@ mkdir ~/.kujira/keyring-file
 mv ~/.kujira/*.info ~/.kujira/*.address ~/.kujira/keyring-file
 ```
 ```
-kujirad keys add wallet
-kujirad keys add oracle
+kujirad keys add wallet --recover
+```
+```
+kujirad keys add oracle --recover
 ```
 ```
 kujirad tx oracle set-feeder <oracle_wallet> --from <validator_wallet> --fees 250ukuji
